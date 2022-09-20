@@ -15,11 +15,11 @@ describe '#Album' do
 
   describe('#save') do 
     it("saves an album") do 
-      album = Album.new("Giant Steps",nil)
-      album.save()
+      album1 = Album.new("Giant Steps",nil)
+      album1.save()
       album2 = Album.new("Blue", nil)
       album2.save()
-      expect(Album.all).to(eq([album, album2]))
+      expect(Album.all).to(eq([album2, album1]))
     end
   end
 

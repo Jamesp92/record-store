@@ -52,5 +52,9 @@ class Album
     @@albums.delete(self.id)
     @@albums_sold[self.id] = Album.new(self.name, self.id)
   end
+
+  def songs
+    Song.find_by_album(self.id)
+  end
 end
  
